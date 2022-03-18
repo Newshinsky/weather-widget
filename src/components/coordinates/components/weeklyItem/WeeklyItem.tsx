@@ -19,11 +19,11 @@ const WeeklyItem = memo((props: PropsType) => {
       <div
         onClick={() => {
           props.setCurrentInfo({
-            icon: props.elem.weather[FIRST_ELEMENT_IN_ARRAY]?.icon,
+            icon: props.index === FIRST_ELEMENT_IN_ARRAY ? props.current.weather[FIRST_ELEMENT_IN_ARRAY].icon : props.elem.weather[FIRST_ELEMENT_IN_ARRAY]?.icon,
             temp: props.index === FIRST_ELEMENT_IN_ARRAY ? props.current.temp : props.elem.temp.max,
             humidity: props.elem.humidity,
-            windSpend: props.elem.wind_speed,
-            windDirection: props.elem.wind_deg,
+            windSpend: props.index === FIRST_ELEMENT_IN_ARRAY ? props.current.wind_speed : props.elem.wind_speed,
+            windDirection: props.index === FIRST_ELEMENT_IN_ARRAY ? props.current.wind_deg : props.elem.wind_deg,
           })
         }}
         className="weekItem"
