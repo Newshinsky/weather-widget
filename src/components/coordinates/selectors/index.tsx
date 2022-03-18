@@ -1,2 +1,5 @@
+import { WeatherReducerType } from "../../../types";
 
-export const coordinatesSelector = (state: any) => state.coordinateName.coordinates
+export const weatherDataSelector = (state: { weather: WeatherReducerType }) => state.weather.weatherData
+export const weatherErrorSelector = (state: { weather: WeatherReducerType }) => state.weather.errors
+

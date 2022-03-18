@@ -1,10 +1,11 @@
-import { handleActions, combineActions } from "redux-actions";
-import * as actions from "../actions/index"
+import { handleActions } from "redux-actions";
+import * as actions from "../actions/index";
+
 
 
 
 const defaultState = {
-  coordinates: {
+  weatherData: {
     country: "",
     lat: "",
     lon: "",
@@ -20,34 +21,34 @@ const defaultState = {
         max: ""
       }
     ]
-
   },
   isLoading: false,
   errors: ""
 }
 
 
-export const getCoordinatesPageReducer = handleActions({
+export const getWeatherDataPageReducer = handleActions({
 
-  [combineActions(actions.GET_COORDINATES_REQUEST.toString())]: (state) => {
-    return { ...state, isLoading: true };
+  [actions.GET_COORDINATES_REQUEST.toString()]: (state) => {
+    return {
+      ...state,
+      isLoading: true,
+      errors: null
+    };
   },
   [actions.GET_COORDINATES_SUCCESS.toString()]: (state, { payload }) => {
-
-    console.log(payload.response)
     return {
       ...state,
       isLoading: false,
-      coordinates: payload.response
+      weatherData: payload.response
     }
   },
-  [combineActions(actions.GET_COORDINATES_FAIL.toString())]: (state, { payload }) => {
+  [actions.GET_COORDINATES_FAIL.toString()]: (state, { payload }) => {
     return {
       ...state,
       isLoading: false,
       errors: payload.response
     }
   }
-
 }, defaultState)
 

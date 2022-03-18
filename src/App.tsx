@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import CoordinateContainer from './components/coordinates/containers/WeatherContainer';
+import WeatherContainer from './components/coordinates/containers/WeatherContainer';
 
 function App() {
   return (
     <div className="App">
-      <CoordinateContainer />
+      <WeatherContainer />
     </div>
   );
 }

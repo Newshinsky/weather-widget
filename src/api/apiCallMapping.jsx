@@ -1,4 +1,4 @@
-import * as coordinateActions from "./../components/coordinates/actions/index"
+import * as coordinateActions from "../components/coordinates/actions/index"
 
 import { CoordinateService } from "../services/CoordinateService";
 
