@@ -1,0 +1,111 @@
+.weatherContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vw;
+}
+
+input,
+.weatherInfoWrapper {
+    border: 1px solid #9696964D;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    width: 50vw;
+}
+
+.weatherInfoWrapper {
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.upperInfoWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.leftInfoWrapper h1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+}
+
+.leftInfoWrapper h4 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #666666;
+}
+
+.temperatureInfo {
+    display: flex;
+    align-items: center;
+}
+
+.temperatureInfo h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 52px;
+
+}
+
+input {
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.weekInformation {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.dailyWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #9696964D;
+    cursor: pointer;
+}
+
+.dailyWrapper h2 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.dailyWrapper h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    margin: 0;
+}
+
+.dailyWrapper h5 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.active {
+    font-weight: bold;
+}
